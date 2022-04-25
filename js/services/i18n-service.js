@@ -125,11 +125,14 @@ function formatNum(num) {
   return new Intl.NumberFormat(gCurrLang).format(num);
 }
 
-function formatCurrency(num) {
-  return new Intl.NumberFormat("he-IL", {
+function formatCurrency(lang, num) {
+  var iCurrency = lang === "en" ? "USD" : lang === "es" ? "EUR" : "ILS";
+
+  var options = {
     style: "currency",
-    currency: "ILS",
-  }).format(num);
+    currency: iCurrency,
+  };
+  return new Intl.NumberFormat(lang, options).format(num);
 }
 
 function formatDate(time) {

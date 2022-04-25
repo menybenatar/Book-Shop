@@ -16,7 +16,7 @@ function renderBooks(lang = "en") {
             book.imgUrl
           }" class="img-fluid img-thumbnail" align="center" class="img-responsive"></td>
           <td>${book.name}</td>
-          <td>${book.price}$</td>
+          <td>${formatCurrency(lang, book.price)}</td>
           <td>${book.rate}</td> 
 
           <td><button onclick="onReadBook('${
