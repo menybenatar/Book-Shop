@@ -134,11 +134,13 @@ function paginationChanged() {
 }
 function onSetLang(lang) {
   setLang(lang);
-  var $elBody = $(".body");
+  var $elBody = $("body");
+
   if (lang === "he") {
-    $elBody.add(".rtl");
+    console.dir($elBody);
+    $elBody.addClass("rtl");
   } else {
-    $elBody.remove(".rtl");
+    $elBody.removeClass("rtl");
   }
   doTrans();
   renderBooks(lang);
