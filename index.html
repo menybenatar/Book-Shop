@@ -50,8 +50,20 @@
       </button>
 
       <div class="add-book">
-        <input class=" " type="text" id="book-name" placeholder="Name" />
-        <input type="number" id="book-price" placeholder="Price" min="1" />
+        <input
+          class=" "
+          type="text"
+          id="book-name"
+          placeholder="Name"
+          data-trans="name"
+        />
+        <input
+          type="number"
+          id="book-price"
+          placeholder="Price"
+          data-trans="price"
+          min="1"
+        />
         <div class="flex-row">
           <button class="btn-add-book" onclick=" onAddBook()" data-trans="add">
             add
