@@ -11,15 +11,15 @@ function renderBooks(lang = "en") {
   var strHtml = "";
   strHtml = books.map((book) => {
     return `<tr>
-          <td >${book.id}</td>
+          <td class="align-middle">${book.id} </td>
           <td ><img width="100px" src="${
             book.imgUrl
-          }" class="img-fluid img-thumbnail" align="center" class="img-responsive"></td>
-          <td>${book.name}</td>
-          <td>${formatCurrency(lang, book.price)}</td>
-          <td>${book.rate}</td> 
+          }" class="img-fluid img-thumbnail" class="align-middle" class="img-responsive"></td>
+          <td class="align-middle">${book.name}</td>
+          <td class="align-middle" >${formatCurrency(lang, book.price)}</td>
+          <td class="align-middle">${book.rate}</td> 
 
-          <td><button onclick="onReadBook('${
+          <td class="align-middle"><button onclick="onReadBook('${
             book.id
           }')" type="button" class="btn btn-success" data-trans = "read">${getTrans(
       "read"
