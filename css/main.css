@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville&family=Roboto:wght@100&family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anaheim&family=Anton&family=Libre+Baskerville:wght@700&family=Roboto:wght@100&family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anaheim&family=Anton&family=Carattere&family=Libre+Baskerville:wght@700&family=Roboto:wght@100&family=Rubik+Wet+Paint&family=Style+Script&display=swap");
+html {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl {
+  direction: rtl;
+}
+
+h1 {
+  font-family: "Carattere", cursive;
+}
+
+thead {
+  background-color: #d3c2ad;
+  gap: 2px;
+  font-size: larger;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+thead td {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+}
+tbody {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+tbody td {
+  font-family: "Libre Baskerville", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+td button.delete:hover {
+  /* background-color: red; */
+  color: black;
+}
+td button.update:hover {
+  /* background-color: peru; */
+  color: black;
+}
+td button.details:hover {
+  /* background-color: chartreuse; */
+  color: black;
+}
+.modal {
+  background-color: lightgray;
+  padding: 10px;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  height: 100%;
+  min-width: 300px;
+  text-align: center;
+}
+.sort_books {
+  width: 7rem;
+  height: 2rem;
+  background-color: black;
+  color: whitesmoke;
+  font-weight: bolder;
+  position: relative;
+  right: 30%;
+  margin-bottom: 1px;
+  font-family: "Anaheim", sans-serif;
+  font-size: 14px;
+}
+
+/* .btn-new-book:hover {
+  color: black;
+} */
+.add-book {
+  /* background-color: lavender; */
+  padding: 10px;
+  /* position: absolute; */
+  /* top: 100px; */
+  /* left: 50%; */
+  /* height: 100%; */
+  min-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-add-book {
+  border-radius: 3px;
+  margin: 1px;
+  background-color: rgb(16, 20, 16);
+  color: white;
+}
+.btn-cancel-add-book {
+  border-radius: 3px;
+  margin: 1px;
+  background-color: rgb(16, 20, 16);
+  color: white;
+}
+
+.next-page {
+  margin: 2px;
+}
+#book-rate {
+  width: 20px;
+  text-align: center;
+}
+.page-pagination-container button {
+  margin-top: 2px;
+  background-color: black;
+  color: whitesmoke;
+}

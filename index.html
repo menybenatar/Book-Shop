@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Book Shop📚</title>
+  </head>
+  <body onload="onInit()" style="width: 80%" class="m-auto">
+    <h1 class="text-center font-weight-bold m-4" data-trans="title">
+      Book Shop
+    </h1>
+    <div class="d-flex justify-content-center">
+      <select class="btn btn-primary" onchange="onSetLang(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+        <option value="es">Spanish</option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-between mt-5">
+      <select
+        class="btn btn-primary align-self-start"
+        onchange="onSetSort(this.value)"
+      >
+        <option class="dropdown-item" data-trans="name" value="NAME">
+          Name
+        </option>
+        <option class="dropdown-item" data-trans="price" value="PRICE">
+          Price
+        </option>
+        <option class="dropdown-item" data-trans="rate" value="RATE">
+          Rate
+        </option>
+      </select>
+      <button
+        type="button"
+        class="btn btn-primary btn-new-book"
+        onclick=" onOpenAddtionBook()"
+        data-trans="new-book"
+      >
+        Create new book
+      </button>
+
+      <div class="add-book">
+        <input class=" " type="text" id="book-name" placeholder="Name" />
+        <input type="number" id="book-price" placeholder="Price" min="1" />
+        <div class="flex-row">
+          <button class="btn-add-book" onclick=" onAddBook()" data-trans="add">
+            add
+          </button>
+          <button
+            class="btn-cancel-add-book"
+            onclick=" onCancelAddBook()"
+            data-trans="cancel"
+          >
+            cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <table class="table" style="text-align: center">
+      <thead class="">
+        <tr>
+          <td data-trans="id">ID</td>
+          <td data-trans="name">Name</td>
+          <td data-trans="price">Price</td>
+          <td data-trans="rate">Rate</td>
+          <td data-trans="img">Image</td>
+          <td data-trans="actions">Actions</td>
+        </tr>
+      </thead>
+      <img src="" alt="" />
+      <tbody></tbody>
+    </table>
+    <div class="modal text-center">
+      <h3></h3>
+      <h6></h6>
+      <p></p>
+      <button class="plus" onclick="onPlusRate()">+</button>
+      <input type="text" id="book-rate" placeholder="0" disabled />
+      <button class="minus" onclick="onMinusRate()">-</button>
+      <br /><br />
+      <div class="close-madal"></div>
+      <!-- <button onclick="onCloseModal()">Close</button> -->
+    </div>
+    <!-- <button class="next-page" onclick="onNextPage()">Next Page</button> -->
+
+    <div class="d-flex justify-content-center page-pagination-container"></div>
+    <!-- Bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/services/i18n-service.js"></script>
+    <script src="./js/services/storage.service.js"></script>
+    <script src="./js/services/util.service.js"></script>
+    <script src="./js/services/books.service.js"></script>
+    <script src="./js/books.controller.js"></script>
+  </body>
+</html>
